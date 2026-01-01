@@ -36,7 +36,7 @@ loginForm.addEventListener('submit', async (e) => {
   const password = document.getElementById('login-password').value;
 
   try {
-    const res = await fetch('http://localhost:3000/login', {
+    const res = await fetch('https://todo-backend-obhg.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ signupForm.addEventListener('submit', async (e) => {
   const password = document.getElementById('signup-password').value;
 
   try {
-    const res = await fetch('http://localhost:3000/register', {
+    const res = await fetch('https://todo-backend-obhg.onrender.com/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -148,7 +148,7 @@ async function fetchTasks() {
   if (!token) return;
 
   try {
-    const res = await fetch('http://localhost:3000/tasks', {
+    const res = await fetch('https://todo-backend-obhg.onrender.com/tasks', {
       headers: {
         'Authorization': 'Bearer ' + token
       }
@@ -221,7 +221,7 @@ taskForm.addEventListener('submit', async (e) => {
   const token = localStorage.getItem('token');
 
   try {
-    const res = await fetch('http://localhost:3000/tasks', {
+    const res = await fetch('https://todo-backend-obhg.onrender.com/tasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -247,7 +247,7 @@ async function deleteTask(taskId) {
   const token = localStorage.getItem('token');
 
   try {
-    const res = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+    const res = await fetch(`https://todo-backend-obhg.onrender.com/tasks/${taskId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': 'Bearer ' + token
@@ -269,7 +269,7 @@ async function toggleTask(taskId, completed) {
   const token = localStorage.getItem('token');
 
   try {
-    const res = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+    const res = await fetch(`https://todo-backend-obhg.onrender.com/tasks/${taskId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
