@@ -44,9 +44,13 @@ Backend API: https://todo-backend-obhg.onrender.com
 ## 📁 Project Structure
 
 Todo-list-Project/
+
 ├── todo-backhend
+
 ├── todo-frontend
+
 ├── .gitignore
+
 └── README.md
 ---
 
